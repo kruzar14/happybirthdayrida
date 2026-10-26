@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday, Rida! 🌷</title>
+<style>
+:root{--pink:#ff8fb8;--rose:#f45f99;--lilac:#c5a5ff;--ink:#492b51;--paper:#fffaff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 10%,#fff 0 2%,transparent 25%),linear-gradient(135deg,#ffe8f1,#f2e9ff 55%,#e4f7ff);overflow-x:hidden}
+main{width:min(920px,92vw);margin:auto;padding:30px 0 55px;position:relative;z-index:1;text-align:center}
+.tag{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:#a64f80;font-weight:800}
+h1{font:clamp(3rem,10vw,5.7rem)/.98 Georgia,serif;color:#d94f8b;margin:18px 0;text-shadow:0 4px #fff9}
+h1 span{color:#8e68c9}
+.intro{font-size:1.08rem;line-height:1.8;max-width:620px;margin:0 auto 24px}
+.card{padding:clamp(20px,4vw,34px);border:1px solid #fff;border-radius:30px;background:#ffffffc9;box-shadow:0 22px 65px #9e5d9b20;backdrop-filter:blur(10px);margin:20px 0}
+.cake{font-size:clamp(5rem,18vw,8rem);animation:bob 3s ease-in-out infinite;filter:drop-shadow(0 10px 8px #c65a8d25)}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+h2{margin:8px 0;color:#9a59b8;font-size:1.65rem}
+p{line-height:1.8}
+button{border:0;border-radius:999px;padding:14px 21px;margin:7px 4px;font-size:1rem;font-weight:800;cursor:pointer;transition:.2s}
+button:hover{transform:translateY(-3px)}
+.primary{color:white;background:linear-gradient(120deg,#ff8fb8,#bc83e8);box-shadow:0 8px 20px #d66ca544}
+.secondary{color:#a3487c;background:#fff;border:1px solid #ffd0e2}
+#letter{display:none;text-align:left;max-width:650px;margin:22px auto 0;padding:24px;background:#fff8fc;border:1px dashed #eca5c6;border-radius:22px;animation:show .5s ease}
+@keyframes show{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.sign{text-align:right;font:italic 1.2rem Georgia,serif;color:#d94f8b}
+.note{font-size:.9rem;color:#8c6c8f;margin-top:20px}
+.float{position:fixed;bottom:-50px;pointer-events:none;z-index:0;animation:rise linear forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.confetti{position:fixed;top:-20px;width:8px;height:13px;z-index:5;animation:fall 3s linear forwards;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.2}}
+.badge{display:inline-block;background:#fff2f8;border:1px solid #ffd4e7;border-radius:16px;padding:10px 14px;margin:5px;font-size:.9rem}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:20px}
+.gallery figure{margin:0;background:#fff;border:1px solid #fff;border-radius:18px;padding:8px;box-shadow:0 10px 28px #9e5d9b16;overflow:hidden}
+.gallery img{display:block;width:100%;height:230px;object-fit:contain;border-radius:12px;background:#fff}
+.gallery figcaption{font-size:.82rem;color:#966c99;padding:9px 4px 3px}
+.feature{display:grid;grid-template-columns: minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:center;text-align:left}
+.feature img{width:100%;max-height:350px;object-fit:contain;border-radius:20px;background:#fff}
+footer{margin-top:20px;font-size:.85rem;color:#98799c}
+@media(max-width:650px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery img{height:190px}.feature{grid-template-columns:1fr;text-align:center}.feature img{max-height:300px}}
+@media(max-width:400px){.gallery{grid-template-columns:1fr}.gallery img{height:240px}}
+</style>
+</head>
+<body>
+<main>
+  <div class="tag">A little birthday page for a certified silly person ✨</div>
+  <h1>Happy Birthday,<br><span>Rida!</span> 🎂</h1>
+  <p class="intro">A tiny bundle of birthday sparkle for my favourite co-adventurer. 💗</p>
+
+  <section class="card">
+    <div class="cake">🎂</div>
+    <h2>Today, you get the extra sprinkles 🌷</h2>
+    <p>Wishing you a day full of good food, happy chaos, tiny surprises, and absolutely no annoying boss fights.</p>
+    <span class="badge">🎮 Genshin co-op</span>
+    <span class="badge">😂 Silly moments</span>
+    <span class="badge">🌸 Main-character treatment</span>
+    <p>Thanks for all the hangouts, laughs, and random nonsense that somehow becomes a whole memory. Hope this next trip around the sun is kind to you, brings you lovely things, and gives you plenty of reasons to smile. You deserve a little pampering today, birthday girl. Not too much, though. Don't let it go to your head. 😌💖</p>
+    <button class="primary" onclick="celebrate()">🎉 Activate birthday chaos</button>
+    <button class="secondary" onclick="toggleLetter()">💌 Open your little letter</button>
+    <div id="letter">
+      <p>Dear Rida, 🌷</p>
+      <p>Happy Birthdayyy! 💗 I’m really glad we get to hang out, play Genshin, and be absolute idiots together sometimes. The little moments are honestly what make it special.</p>
+      <p>I hope this year brings you good luck on your pulls, fun adventures, lots of laughter, and people who make you feel appreciated. May your snacks be delicious, your days be gentle, and your commissions be quick. And today, please accept a reasonable amount of birthday pampering because you’ve earned it. ✨</p>
+      <p>Stay your silly self, keep smiling, and have the loveliest birthday. Now go enjoy your day before I start being embarrassingly wholesome. 😂🎂</p>
+      <p class="sign">From your co-op buddy 💕</p>
+    </div>
+  </section>
+
+  <section class="card feature">
+    <img src="assets/birthday-scene.png" alt="Cute Genshin-inspired birthday celebration artwork">
+    <div>
+      <div class="tag">Birthday quest unlocked</div>
+      <h2>Rida's Birthday Commission 🎁</h2>
+      <p><b>Objective:</b> Have a lovely day.</p>
+      <p><b>Bonus rewards:</b> good food, comfy vibes, unexpected treats, and one guaranteed friend who will keep queueing co-op with you. (Rates subject to Teyvat conditions.)</p>
+      <button class="primary" onclick="celebrate()">Claim celebration ✨</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>A little Furina corner 💙</h2>
+    <p>Because every birthday deserves a bit of dramatic Fontaine sparkle.</p>
+    <div class="gallery">
+      <figure><img src="assets/furina-figure.png" alt="Furina cake figurine"><figcaption>Birthday cake energy 🎂</figcaption></figure>
+      <figure><img src="assets/furina-art.png" alt="Furina fan art"><figcaption>Elegant but silly 💎</figcaption></figure>
+      <figure><img src="assets/furina-chibi.png" alt="Furina chibi illustration"><figcaption>Certified little gremlin ✨</figcaption></figure>
+      <figure><img src="assets/furina-smile.png" alt="Smiling Furina chibi"><figcaption>Maximum sparkle 🌟</figcaption></figure>
+      <figure><img src="assets/birthday-chibi.png" alt="Furina birthday chibi"><figcaption>Birthday cuteness 🎀</figcaption></figure>
+      <figure><img src="assets/birthday-scene.png" alt="Furina birthday party"><figcaption>Party time! 🎉</figcaption></figure>
+    </div>
+  </section>
+
+  <p class="note">P.S. May your next 5-star come early. This is a birthday wish, not a guarantee. 🎲</p>
+  <footer>Made with 💗, a little teasing, and lots of good wishes.</footer>
+</main>
+<script>
+const bits=['💗','🌷','✨','🎈','💕','⭐','🎮','🌸'];
+function floaty(){let e=document.createElement('span');e.className='float';e.textContent=bits[Math.floor(Math.random()*bits.length)];e.style.left=Math.random()*100+'vw';e.style.fontSize=(18+Math.random()*20)+'px';e.style.animationDuration=(5+Math.random()*5)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),10500)}
+setInterval(floaty,600);
+function celebrate(){for(let i=0;i<120;i++){let c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'vw';c.style.background=['#ff8fb8','#ffd166','#b9a0ff','#92e0d0','#fff'][i%5];c.style.animationDelay=Math.random()*.8+'s';document.body.appendChild(c);setTimeout(()=>c.remove(),4000)}}
+function toggleLetter(){let e=document.getElementById('letter');e.style.display=e.style.display==='block'?'none':'block';if(e.style.display==='block')e.scrollIntoView({behavior:'smooth',block:'nearest'})}
+</script>
+</body>
+</html>
