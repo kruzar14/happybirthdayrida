@@ -56,13 +56,13 @@ footer{margin-top:20px;font-size:.85rem;color:#98799c}
     <span class="badge">🎮 Genshin co-op</span>
     <span class="badge">😂 Silly moments</span>
     <span class="badge">🌸 Main-character treatment</span>
-    <p>Thanks for all the hangouts, laughs, and random nonsense that somehow becomes a whole memory. Hope this next trip around the sun is kind to you, brings you lovely things, and gives you plenty of reasons to smile. You deserve a little pampering today, birthday girl. Not too much, though. Don't let it go to your head. 😌💖</p>
+    <p>Thanks for all the hangouts, laughs, and random nonsense that somehow becomes a whole memory. Hope this next trip around the sun is kind to you, brings you lovely things, and gives you plenty of reasons to smile. You deserve so many good things, birthday girl. Hope today gives you lots of reasons to smile. 😌💖</p>
     <button class="primary" onclick="celebrate()">🎉 Activate birthday chaos</button>
     <button class="secondary" onclick="toggleLetter()">💌 Open your little letter</button>
     <div id="letter">
       <p>Dear Rida, 🌷</p>
       <p>Happy Birthdayyy! 💗 I’m really glad we get to hang out, play Genshin, and be absolute idiots together sometimes. The little moments are honestly what make it special.</p>
-      <p>I hope this year brings you good luck on your pulls, fun adventures, lots of laughter, and people who make you feel appreciated. May your snacks be delicious, your days be gentle, and your commissions be quick. And today, please accept a reasonable amount of birthday pampering because you’ve earned it. ✨</p>
+      <p>I hope this year brings you good luck on your pulls, fun adventures, lots of laughter, and people who make you feel appreciated. May your snacks be delicious, your days be gentle, and your commissions be quick. And I hope you have the loveliest day, full of fun, laughter, and little things that make you happy. ✨</p>
       <p>Stay your silly self, keep smiling, and have the loveliest birthday. Now go enjoy your day before I start being embarrassingly wholesome. 😂🎂</p>
       <p class="sign">From your co-op buddy 💕</p>
     </div>
@@ -75,10 +75,11 @@ footer{margin-top:20px;font-size:.85rem;color:#98799c}
       <h2>Rida's Birthday Commission 🎁</h2>
       <p><b>Objective:</b> Have a lovely day.</p>
       <p><b>Bonus rewards:</b> good food, comfy vibes, unexpected treats, and one guaranteed friend who will keep queueing co-op with you. (Rates subject to Teyvat conditions.)</p>
-      <button class="primary" onclick="celebrate()">Claim celebration ✨</button>
+      <button class="primary" onclick="openVideo()">Claim celebration ✨</button>
     </div>
   </section>
 
+  <section id="videoCard" class="card" style="display:none"><h2>A birthday video for you, Rida 💗</h2><div style="position:relative;max-width:560px;margin:auto;aspect-ratio:9/16"><iframe id="birthdayVideo" title="Birthday video" style="position:absolute;width:100%;height:100%;border:0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><button class="secondary" onclick="closeVideo()">Close video</button></section>
   <section class="card">
     <h2>A little Furina corner 💙</h2>
     <p>Because every birthday deserves a bit of dramatic Fontaine sparkle.</p>
@@ -99,6 +100,8 @@ footer{margin-top:20px;font-size:.85rem;color:#98799c}
 const bits=['💗','🌷','✨','🎈','💕','⭐','🎮','🌸'];
 function floaty(){let e=document.createElement('span');e.className='float';e.textContent=bits[Math.floor(Math.random()*bits.length)];e.style.left=Math.random()*100+'vw';e.style.fontSize=(18+Math.random()*20)+'px';e.style.animationDuration=(5+Math.random()*5)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),10500)}
 setInterval(floaty,600);
+function openVideo(){const c=document.getElementById("videoCard");document.getElementById("birthdayVideo").src="https://www.youtube.com/embed/4KQiT8l1W3I?autoplay=1";c.style.display="block";c.scrollIntoView({behavior:"smooth"});celebrate()}
+function closeVideo(){document.getElementById("birthdayVideo").src="";document.getElementById("videoCard").style.display="none"}
 function celebrate(){for(let i=0;i<120;i++){let c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'vw';c.style.background=['#ff8fb8','#ffd166','#b9a0ff','#92e0d0','#fff'][i%5];c.style.animationDelay=Math.random()*.8+'s';document.body.appendChild(c);setTimeout(()=>c.remove(),4000)}}
 function toggleLetter(){let e=document.getElementById('letter');e.style.display=e.style.display==='block'?'none':'block';if(e.style.display==='block')e.scrollIntoView({behavior:'smooth',block:'nearest'})}
 </script>
